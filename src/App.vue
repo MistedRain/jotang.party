@@ -1,23 +1,27 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
     <router-view></router-view>
-  </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+
 </script>
 
-<style>
+<style lang="less">
+@import "assets/jotang.less";
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system,
+  "Helvetica Neue", "Arial",
+  "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei",
+  "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC",
+  "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
+h1 {
+  margin: auto;
+ 
+}
+
 </style>

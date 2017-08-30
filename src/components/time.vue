@@ -15,7 +15,7 @@
       </mu-timeline-item>
       <mu-timeline-item>
         <span slot="time">2016年 10月 </span>
-        <span slot="des">Moodfeeler项目成型<br/>添加breadcrumb组件</span>
+        <span slot="des">Moodfeeler项目成型</span>
       </mu-timeline-item>
       <mu-timeline-item>
         <span slot="time">2016年 11月</span>

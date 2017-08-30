@@ -2,7 +2,7 @@
 
   <div class="nav">
 
-  <mu-appbar :zDepth="0" title="JoTang" class="appbar" :class="{'nav-hide': !open}">
+  <mu-appbar :zDepth="1" title="介绍" class="appbar" :class="{'nav-hide': !open}">
     
   <mu-icon-button @click.native="toggleNav" icon="menu" slot="left" />
 
@@ -11,12 +11,16 @@
 
 
     <mu-drawer @hide="handleHide" @close="toggleNav" :open="open" :docked="docked" :overlay="docked" class="app-drawer" :zDepth="1">
-      <mu-list>
-        <mu-list-item title="Menu Item 1" />
-        <mu-list-item title="Menu Item 2" />
-        <mu-list-item title="Menu Item 3" />
-        <mu-list-item v-if="docked" @click.native="open = false" title="Close" />
-      </mu-list>
+        <img src="../../static/images/text.png"/>
+        <mu-sub-header>友情链接</mu-sub-header>
+        <mu-list>
+          <mu-list-item href="https://github.com/JoTang" target="_blank" title="JoTang on GitHub"/>
+          <mu-list-item href="http://www.zuozuovera.cn" target="_blank" title="薇拉航线"/>
+          <mu-list-item href="http://vuejs.org/" target="_blank" title="Vue"/>
+          <mu-list-item href="https://material.google.com/" target="_blank" title="Material Design"/>
+          <mu-divider shallowInset/>
+          <mu-list-item v-if="docked" @click.native="open = false" title="Close" />
+        </mu-list>
     </mu-drawer>
   </div>
 </template>
@@ -80,5 +84,7 @@ function isDesktop () {
   display: flex;
   flex-direction: column;
 }
-
+img {
+  height: 2cm;
+}
 </style>

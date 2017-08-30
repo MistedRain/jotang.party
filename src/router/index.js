@@ -4,7 +4,7 @@ import intro from '../pages/Intro'
 import hello from '../pages/Hello'
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [{
     path: '/',
     name: 'Hello',
@@ -16,3 +16,10 @@ export default new Router({
     component: intro
   }]
 })
+
+router.beforeEach((to, from, next) => {
+  window.scrollTo(0, 0) // scroll to top
+  next()
+})
+
+export default router

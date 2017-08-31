@@ -4,7 +4,7 @@ import App from './App'
 // import appBar from 'muse-components/appBar'
 import router from './router'
 import MuseUI from 'muse-ui'
-
+import './assets/font-icons/style.css'
 import 'muse-ui/dist/muse-ui.css'
 import 'muse-ui/dist/theme-carbon.css'
 

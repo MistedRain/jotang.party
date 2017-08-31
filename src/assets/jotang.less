@@ -8,7 +8,8 @@
 @lighterPrimaryColor: @grey400;      // 浅一点的主色
 @accentColor: @pinkA200;             // 强调色
 @darkerAccentColor: @grey100;        // 更深的强调色
-@lighterAccentColor: @grey500;       // 浅一点的强调色
+@lighterAccentColor: @grey500;
+@topcolor:#feceab;       // 浅一点的强调色
 
 // 文本颜色
 @textColor: @darkBlack;
@@ -24,5 +25,27 @@
 @dialogBackgroundColor: @white; // dialogs、 cards、 paper 组件背景
 
 // icon color
-@activeIconColor: fade(@fullBlack, 54%);
+@activeIconColor: fade(@fullBlack, 43%);
 @inActiveIconColor: fade(@fullBlack, 38%);
+
+
+#app{
+  .mu-appbar {
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  }
+  
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  font: @textColor;
+  
+  .app-drawer{
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    .mu-item-title{
+      color: #355c7d;
+    }
+    .mu-list{
+      .mu-icon{
+        color:#355c7d;
+      }
+    }
+  }
+}

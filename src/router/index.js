@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import intro from '../components/intro'
-import jotangers from '../components/jotangers'
+import intro from '../pages/intro'
+import jotangers from '../pages/jotangers'
 
 Vue.use(Router)
 

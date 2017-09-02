@@ -9,7 +9,7 @@
 
     <mu-drawer @close="toggleNav" :open="open" :docked="docked" :overlay="docked" class="app-drawer" :zDepth="1">
       <mu-list>
-        <router-link to="intro">
+        <router-link to="/">
           <mu-list-item title="关于焦糖">
             <mu-icon slot="left" value="info_outline" />
           </mu-list-item>
@@ -113,6 +113,7 @@ function isDesktop () {
   padding: 48px 72px;
   display: flex;
   flex-direction: column;
+  overflow-y: inherit;
 }
 @media (min-width: 480px) {
   .content{

@@ -11,7 +11,7 @@
       <mu-list>
         <router-link to="/">
           <mu-list-item title="关于焦糖">
-            <mu-icon slot="left" value="info_outline" />
+            <mu-icon slot="left" value="home" />
           </mu-list-item>
         </router-link>
         <router-link to="jotangers">
@@ -19,13 +19,16 @@
             <mu-icon slot="left" value="people" />
           </mu-list-item>
         </router-link>
+        <router-link to="timeshaft">
+          <mu-list-item title="时间轴">
+            <mu-icon slot="left" value="timeline" />
+          </mu-list-item>
+        </router-link>
       </mu-list>
       <mu-sub-header>友情链接</mu-sub-header>
       <mu-list>
         <mu-list-item href="https://github.com/JoTang" target="_blank" title="JoTang on GitHub" />
         <mu-list-item href="http://www.zuozuovera.cn" target="_blank" title="薇拉航线" />
-        <mu-list-item href="http://vuejs.org/" target="_blank" title="Vue" />
-        <mu-list-item href="https://material.google.com/" target="_blank" title="Material Design" />
         <mu-divider shallowInset/>
         <mu-list-item v-if="docked" @click.native="open = false" title="Close" />
       </mu-list>
@@ -87,12 +90,12 @@ function isDesktop () {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  overflow: hidden;
 }
 
 .appbar {
   position: fixed;
-  left: 18em;
+  left: 256px;
   right: 0;
   top: 0;
   width: auto;
@@ -104,16 +107,15 @@ function isDesktop () {
 }
 
 .content {
-  position: fixed;
   padding-top: 56px;
   padding-left: 256px;
+  overflow: auto;
 }
 
 .wrapper {
   padding: 48px 72px;
   display: flex;
   flex-direction: column;
-  overflow-y: inherit;
 }
 @media (min-width: 480px) {
   .content{

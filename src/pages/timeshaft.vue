@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <mu-timeline>
       <mu-timeline-item iconColor="red" iconType="dotted">
         <span slot="time">2015年年底 </span>

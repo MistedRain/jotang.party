@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import intro from '../pages/intro'
 import jotangers from '../pages/jotangers'
+import timeshaft from '../pages/timeshaft'
 
 Vue.use(Router)
 
@@ -15,6 +16,11 @@ const router = new Router({
     path: '/jotangers',
     name: 'jotangers',
     component: jotangers
+  },
+  {
+    path: '/timeshaft',
+    name: 'timeshaft',
+    component: timeshaft
   }]
 })
 

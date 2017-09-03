@@ -10,17 +10,17 @@
     <mu-drawer @close="toggleNav" :open="open" :docked="docked" :overlay="docked" class="app-drawer" :zDepth="1">
       <mu-list>
         <router-link to="/">
-          <mu-list-item title="关于焦糖">
+          <mu-list-item @click="toggleNav()" title="关于焦糖">
             <mu-icon slot="left" value="home" />
           </mu-list-item>
         </router-link>
         <router-link to="jotangers">
-          <mu-list-item title="成员介绍">
+          <mu-list-item @click="toggleNav()" title="成员介绍">
             <mu-icon slot="left" value="people" />
           </mu-list-item>
         </router-link>
         <router-link to="timeshaft">
-          <mu-list-item title="时间轴">
+          <mu-list-item @click="toggleNav()" title="时间轴">
             <mu-icon slot="left" value="timeline" />
           </mu-list-item>
         </router-link>

@@ -10,17 +10,17 @@
     <mu-drawer @close="toggleNav" :open="open" :docked="docked" :overlay="docked" class="app-drawer" :zDepth="1">
       <mu-list>
         <router-link to="/">
-          <mu-list-item @click="toggleNav()" title="关于焦糖">
+          <mu-list-item @click="changeNav()" title="关于焦糖">
             <mu-icon slot="left" value="home" />
           </mu-list-item>
         </router-link>
         <router-link to="jotangers">
-          <mu-list-item @click="toggleNav()" title="成员介绍">
+          <mu-list-item @click="changeNav()" title="成员介绍">
             <mu-icon slot="left" value="people" />
           </mu-list-item>
         </router-link>
         <router-link to="timeshaft">
-          <mu-list-item @click="toggleNav()" title="时间轴">
+          <mu-list-item @click="changeNav()" title="时间轴">
             <mu-icon slot="left" value="timeline" />
           </mu-list-item>
         </router-link>
@@ -34,7 +34,7 @@
       </mu-list>
     </mu-drawer>
 
-    <div class="content">
+    <div class="content" :class="{'nav-hide': !open}">
       <router-view/>
     </div>
 
@@ -110,12 +110,19 @@ function isDesktop () {
   padding-top: 56px;
   padding-left: 256px;
   overflow: auto;
+  transition: all .45s cubic-bezier(0.23, 1, 0.32, 1);
+  &.nav-hide {
+    padding-left: 0;
+  }
 }
 
 .wrapper {
   padding: 48px 72px;
   display: flex;
   flex-direction: column;
+  &.nav-hide {
+    left: 0;
+  }
 }
 @media (min-width: 480px) {
   .content{
@@ -134,7 +141,6 @@ function isDesktop () {
     padding: 24px 36px;
   }
 }
-
 
 .app-drawer {
   display: flex;

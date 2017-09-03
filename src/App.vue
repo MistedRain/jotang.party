@@ -121,23 +121,21 @@ function isDesktop () {
   .content{
     padding-top: 64px;
   }
-  .appbar{
-    height: 48px;
-  }
-  .app-drawer{
-    width: 196px;
-  }
 }
 
 @media (max-width: 993px) {
   .appbar {
     left: 0;
+    height: 48px;
   }
   .content {
     padding-left: 0;
   }
   .wrapper {
     padding: 24px 36px;
+  }
+  .app-drawer{
+    width: 196px;
   }
 }
 

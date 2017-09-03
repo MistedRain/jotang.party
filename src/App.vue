@@ -117,9 +117,15 @@ function isDesktop () {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 480px) {
+@media (max-width: 480px) {
   .content{
     padding-top: 64px;
+  }
+  .appbar{
+    height: 48px;
+  }
+  .app-drawer{
+    width: 196px;
   }
 }
 
